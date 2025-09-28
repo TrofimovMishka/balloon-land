@@ -33,14 +33,44 @@
 }
 
 .footer {
-  padding: 10px;
+  max-height: 90px;
+  min-height: 60px;
+  padding: 5px;
   text-align: left;
   background-color: #E0E4CE;
+  margin: 30px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .follow-us {
+  /* max-width: 600px; */
+  min-width: 400px;
+  min-height: 30px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-media:hover {
+  animation: beat-pulse 0.8s ease-in-out infinite;
+}
+
+.social-media-link{
+  cursor: pointer;
+  height: 100%;
+}
+
+@keyframes beat-pulse {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1.4); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 a {
@@ -92,4 +122,43 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.phone-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.phone-icon {
+  display: block;
+  transition: opacity 0.7s ease;
+}
+
+.phone-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-left: 40px;
+  text-align: top;
+}
+
+.phone-container:hover .phone-icon {
+  opacity: 0;
+}
+
+.phone-container:hover .phone-text,
+.phone-container.keep-text-visible .phone-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Remove the class after 5 seconds when hover ends */
+.phone-container:not(:hover) .phone-text {
+  transition: opacity 0.7s ease 3s, visibility 0s linear 3.7s;
 }
