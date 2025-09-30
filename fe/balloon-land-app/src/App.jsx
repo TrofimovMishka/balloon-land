@@ -1,4 +1,5 @@
-import Footer from './components/Footer'
+import Footer from './components/footer/Footer'
+import Header from './components/header/Header'
 
 function App() {
 
@@ -6,8 +7,10 @@ function App() {
     <>
       <div className='body'>
 
-        <div className='header'><p>Baloon-landia welcome you</p></div>
+        <div><Header /></div>
+
         <div><h1>Body</h1></div>
+
         <div><Footer /></div>
 
       </div>

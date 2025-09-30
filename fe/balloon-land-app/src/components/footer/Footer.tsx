@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane, faEnvelope, faSquarePhone, faPhone } from '@fortawesome/free-solid-svg-icons'
 
+import './Footer.css'
+
 const instagramUrl: string = import.meta.env.VITE_INSATGRAM_URL
 const facebookUrl: string = import.meta.env.VITE_FACEBOOK_URL
 const telegramUrl: string = import.meta.env.VITE_TELEGRAM_URL
@@ -52,6 +54,8 @@ class Footer extends React.Component {
             </div>
             <div className="phone-container">
               <FontAwesomeIcon icon={faPhone} size="lg" className="phone-icon" />
+            </div>
+            <div>
               <span className="phone-text">{phoneNumber}</span>
             </div>
           </div>

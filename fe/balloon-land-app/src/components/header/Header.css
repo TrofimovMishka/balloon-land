@@ -1,0 +1,41 @@
+.header {
+    min-height: 12px;
+    padding: 5px;
+    text-align: center;
+    /* background-color: #E0E4CE; */
+    margin: 2px;
+    border-radius: 2px 2px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(35deg, #E0E4CE, #FAC9BD, #45b7d1, #F1FFA1);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+}
+
+.header-title {
+    font-size: 1.3em;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 10%;
+    }
+
+    25% {
+        background-position: 20% 70%;
+    }
+
+    50% {
+        background-position: 100% 5%;
+    }
+
+    75% {
+        background-position: 70% 40%;
+    }
+
+    100% {
+        background-position: 10% 0%;
+    }
+}
