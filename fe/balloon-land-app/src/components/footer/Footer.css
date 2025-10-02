@@ -1,4 +1,5 @@
 .footer {
+  width: 90%;
   max-height: 90px;
   min-height: 60px;
   padding: 5px;
@@ -51,43 +52,4 @@
   100% {
     transform: scale(1);
   }
-}
-
-
-.phone-container {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.phone-icon {
-  display: block;
-  transition: opacity 0.7s ease;
-}
-
-.phone-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  white-space: nowrap;
-  padding-left: 40px;
-  text-align: top;
-}
-
-.phone-container:hover .phone-icon {
-  opacity: 0;
-}
-
-.phone-container:hover .phone-text,
-.phone-container.keep-text-visible .phone-text {
-  opacity: 1;
-  visibility: visible;
-}
-
-.phone-container:not(:hover) .phone-text {
-  transition: opacity 0.7s ease 3s, visibility 0.7s ease 3.7s;
 }

@@ -1,3 +1,4 @@
+import AdvertisementBox from './components/box/AdvertisementBox'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 
@@ -7,11 +8,13 @@ function App() {
     <>
       <div className='body'>
 
-        <div><Header /></div>
-
-        <div><h1>Body</h1></div>
-
-        <div><Footer /></div>
+        <Header />
+        <div className='content-box'>
+          <AdvertisementBox />
+          {/* <AdvertisementBox />
+          <AdvertisementBox /> */}
+        </div>
+        <Footer />
 
       </div>
     </>

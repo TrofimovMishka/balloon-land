@@ -14,7 +14,9 @@ const phoneNumber: string = import.meta.env.VITE_PHONE_NUMBER
 
 // TODO: Refactor for phone size
 class Footer extends React.Component {
+
   render() {
+
     return (
       <>
         <div className='footer'>
@@ -52,11 +54,8 @@ class Footer extends React.Component {
             >
               <FontAwesomeIcon icon={faEnvelope} size="lg" />
             </div>
-            <div className="phone-container">
-              <FontAwesomeIcon icon={faPhone} size="lg" className="phone-icon" />
-            </div>
-            <div>
-              <span className="phone-text">{phoneNumber}</span>
+            <div >
+              <span >{phoneNumber}</span>
             </div>
           </div>
         </div>
