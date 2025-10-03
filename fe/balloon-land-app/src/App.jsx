@@ -1,4 +1,5 @@
 import AdvertisementBox from './components/box/AdvertisementBox'
+import MenuBox from './components/box/MenuBox'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 
@@ -11,8 +12,7 @@ function App() {
         <Header />
         <div className='content-box'>
           <AdvertisementBox />
-          {/* <AdvertisementBox />
-          <AdvertisementBox /> */}
+          <MenuBox />
         </div>
         <Footer />
 

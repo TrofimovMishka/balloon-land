@@ -1,85 +1,14 @@
 .box {
-    width: 93%;
-    height: 400px;
+    width: 95%;
+    height: fit-content;
     padding: 3px;
     margin: 30px 10px;
     border-radius: 7px;
     background-color: rgba(236, 144, 58, 0.2);
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .box:hover{
     opacity: 1;
-}
-
-img {
-    opacity: 0.9;
-    border-radius: 8px;
-}
-
-.polaroid {
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-}
-
-.image-text {
-    text-align: center; 
-    padding: 10px 20px;
-}
-
-.adv-image-1 {
-    position: relative;
-    left: 20px;
-    top: 20px;
-    z-index: 1;
-    transform: rotate(-8deg);
-    height: fit-content;
-    width: fit-content;
-}
-
-img:hover {
-    box-shadow: 0 10px 20px 1px rgba(57, 102, 117, 0.9);
-    opacity: 10;
-}
-
-.image-1-size{
-    width: 300px;
-    height: auto;
-}
-
-.adv-image-2 {
-    position: relative;
-    left: 190px;
-    top: -180px;
-    z-index: 2;
-    transform: rotate(5deg);
-    height: fit-content;
-    width: fit-content;
-}
-
-.image-2-size{
-    width: 280px;
-    height: auto;
-}
-
-.adv-image-3 {
-    position: relative;
-    left: 360px;
-    top: -460px;
-    z-index: 2;
-    /* transform: rotate(-5deg); */
-    height: fit-content;
-    width: fit-content;
-}
-
-.image-3-size{
-    width: 380px;
-    height: auto;
-}
-
-.adv-image-1:hover, .adv-image-2:hover, .adv-image-3:hover{
-    z-index: 100;
 }

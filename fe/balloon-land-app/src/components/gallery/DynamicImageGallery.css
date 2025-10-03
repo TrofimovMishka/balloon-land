@@ -1,0 +1,16 @@
+.photo-album {
+    padding: 10px;
+    max-width: 1920px;
+    height: fit-content;
+    margin: 0;
+}
+
+img {
+    opacity: 0.9;
+    border-radius: 6px;
+}
+
+img:hover {
+    box-shadow: 0 10px 20px 1px rgba(57, 102, 117, 0.9);
+    opacity: 10;
+}
