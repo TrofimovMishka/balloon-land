@@ -12,6 +12,7 @@
     background: linear-gradient(35deg, #E0E4CE, #FAC9BD, #45b7d1, #F1FFA1);
     background-size: 300% 300%;
     animation: gradientShift 12s ease infinite;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .header-title {

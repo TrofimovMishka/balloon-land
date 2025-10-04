@@ -1,0 +1,9 @@
+#polaroid{
+    background-color: black;
+    height: fit-content;
+    min-height: 190px;
+    width: 95%;
+    text-decoration-color: blanchedalmond;
+    margin: 15px;
+    border-radius: 8px;
+}

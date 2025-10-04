@@ -5,6 +5,11 @@ import 'yet-another-react-lightbox/styles.css';
 import "react-photo-album/rows.css";
 import './DynamicImageGallery.css';
 
+interface DynamicImageGalleryProps {
+    photoLocation: string,
+    customLayout: string
+}
+
 interface Photo {
     src: string;
     width: number;
@@ -12,7 +17,7 @@ interface Photo {
     alt: string;
 }
 
-const DynamicImageGallery: React.FC = () => {
+const DynamicImageGallery: React.FC<DynamicImageGalleryProps> = ({ photoLocation, customLayout }) => {
     const [photos, setPhotos] = useState<Photo[]>([]);
     const [index, setIndex] = useState(-1);
     const [loading, setLoading] = useState(true);
@@ -20,11 +25,38 @@ const DynamicImageGallery: React.FC = () => {
     useEffect(() => {
         const loadImages = async () => {
             try {
-                const imageModules = import.meta.glob('/src/assets/adv-images/*.{jpg,jpeg,png}', {
-                    eager: true,
-                    query: '?url',
-                    import: 'default'
-                });
+                let imageModules;
+
+                switch (photoLocation) {
+                    case "ballon":
+                        imageModules = import.meta.glob('/src/assets/menu-images/ballon/*.{jpg,jpeg,png}', {
+                            eager: true,
+                            query: '?url',
+                            import: 'default'
+                        });
+                        break;
+                    case "cuk":
+                        imageModules = import.meta.glob('/src/assets/menu-images/cuk/*.{jpg,jpeg,png}', {
+                            eager: true,
+                            query: '?url',
+                            import: 'default'
+                        });
+                        break;
+                    case "zone":
+                        imageModules = import.meta.glob('/src/assets/menu-images/zone/*.{jpg,jpeg,png}', {
+                            eager: true,
+                            query: '?url',
+                            import: 'default'
+                        });
+                        break;
+                    default:
+                        imageModules = import.meta.glob('/src/assets/adv-images/*.{jpg,jpeg,png}', {
+                            eager: true,
+                            query: '?url',
+                            import: 'default'
+                        });
+                        break;
+                }
 
                 const loadedPhotos: Photo[] = await Promise.all(
                     Object.entries(imageModules).map(async ([path, url]) => {
@@ -73,8 +105,8 @@ const DynamicImageGallery: React.FC = () => {
         <div className='photo-album'>
             <PhotoAlbum
                 photos={photos}
-                layout="rows"
-                targetRowHeight={150}
+                layout={customLayout}
+                targetRowHeight={200}
                 spacing={10}
                 padding={5}
                 onClick={({ index }) => setIndex(index)}
